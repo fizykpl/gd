@@ -15,7 +15,7 @@ public class UtilsDataGenerator {
 	
 	public static Logger LOGGER = Logger.getLogger(UtilsDataGenerator.class.getName());
 	
-	public static int maxLine = 250000;
+	public static int maxLine = 100000;
 	
 	public static File[] generateData(long nline,int nAttributes, double mi, double sigma){
 		int countFile = 1;

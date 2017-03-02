@@ -1,14 +1,15 @@
 package com.gd.data.logic;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.logging.Logger;
 
 public class Logic {
-	
-//	Map<String, List<String>> attributes;
+	public static Logger LOGGER = Logger.getLogger(Logic.class.getName());
 	Map<String, Integer> counts; 
 	int amountList;
 	
@@ -30,7 +31,7 @@ public class Logic {
 			}
 		}
 		time =System.nanoTime() - time;
-		System.out.println("Add time: count= " + ids.size() + " time= " + time+ "[ns]");
+		LOGGER.info("Add time: count= " + ids.size() + " time= " + (time*1.0)*10e-10 + " [s]");
 			
 	}
 	
@@ -51,7 +52,7 @@ public class Logic {
 			}
 		}
 		time =System.nanoTime() - time;
-		System.out.println("Remove time: count= " + ids.size() + " time= " + time+ "[ns]");
+		LOGGER.info("Remove time: count= " + ids.size() + " time= " + (time*1.0)*10e-10 + " [s]");
 	}
 	
 
@@ -66,7 +67,7 @@ public class Logic {
 		}
 		
 		time =System.nanoTime() - time;
-		System.out.println("And time: count= " + out.size() + " time= " + time+ "[ns]");
+		LOGGER.info("And time: count= " + out.size() + " time= " + (time*1.0)*10e-10 + " [s]");
 		return out;		
 	}
 	
@@ -75,7 +76,7 @@ public class Logic {
 		ArrayList<String> out = new ArrayList<String>(counts.keySet());
 		
 		time =System.nanoTime() - time;
-		System.out.println("Or time: count= " + out.size() + " time= " + time + "[ns]");
+		LOGGER.info("Or time: count= " + out.size() + " time= " + (time*1.0)*10e-10 + " [s]");
 		return out;		
 	}
 

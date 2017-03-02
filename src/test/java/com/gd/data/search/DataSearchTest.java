@@ -59,7 +59,7 @@ public class DataSearchTest {
 
 	@Test
 	public void searchTest() {
-		HashMap<String,File> filePattern = getInputFiles("1488404818130_1488376600246_1000000_500_0,25_0,1_");
+		HashMap<String,File> filePattern = getInputFiles("1488489052844_1488488964794_1000000_500_0,25_0,1_");
 		 DataSearch ds = new DataSearch(filePattern);
 		 
 		 List<String> iDs0 = ds.getIDs("0");

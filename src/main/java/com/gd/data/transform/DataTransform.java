@@ -12,11 +12,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.logging.Logger;
 
 import com.gd.data.model.InputModel;
 
 public class DataTransform {
-
+	public static Logger LOGGER = Logger.getLogger(DataTransform.class.getName());
 	private File[] inputFile;
 	private String outputFileNamePattern;
 	private HashMap<String, File> outputFiles;
@@ -30,8 +31,6 @@ public class DataTransform {
 
 	public void execute() throws IOException {
 		this.outputFileNamePattern = prepareOutputFileNamePattern();
-
-		// this.outputFileNamePattern = timestamp+"_"+
 		for (File file : inputFile) {
 
 			FileInputStream fstream = new FileInputStream(file);
@@ -59,13 +58,12 @@ public class DataTransform {
 	}
 
 	private void transform(InputModel model) {
-		System.out.println("Transform " + model.id);
+		LOGGER.info("Transform id: " + model.id);
 		int size = model.attributes.length;
 		for (int i = 0; i < size; i++) {
 			checkFileAttribute(model, i);
 		}
 		writeId(model);
-//		System.out.println("stop");
 
 	}
 

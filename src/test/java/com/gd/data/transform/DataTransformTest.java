@@ -11,7 +11,7 @@ public class DataTransformTest {
 	
 	@Test
 	public void transformTest(){
-		File[] filePattern = getFilePattern("1488376600246");
+		File[] filePattern = getFilePattern("1488488964794");
 		DataTransform df = new DataTransform(filePattern);
 		try {
 			df.execute();
@@ -24,7 +24,7 @@ public class DataTransformTest {
 	
 	@Test
 	public void getFilePatternTest(){
-		File[] filePattern = getFilePattern("1488376600246");
+		File[] filePattern = getFilePattern("1488488964794");
 		assertTrue(filePattern.length==4);		
 	}
 	

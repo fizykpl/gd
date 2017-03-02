@@ -2,7 +2,6 @@ package com.gd.data.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.google.common.primitives.Ints;
 
 public class InputModel {
 

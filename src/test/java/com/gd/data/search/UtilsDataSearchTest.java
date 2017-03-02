@@ -12,7 +12,7 @@ public class UtilsDataSearchTest {
 	
 	@Test
 	public void dataSearchTest(){
-		String pattern = "1488404818130_1488376600246_1000000_500_0,25_0,1_";
+		String pattern = "1488489052844_1488488964794_1000000_500_0,25_0,1_";
 		HashMap<String, File> inputFiles = getInputFiles(pattern);
 		
 		DataSearch ds = new DataSearch(inputFiles);
@@ -22,7 +22,7 @@ public class UtilsDataSearchTest {
 
 	@Test
 	public void getInputFilesTest() {
-		String pattern = "1488404818130_1488376600246_1000000_500_0,25_0,1_";
+		String pattern = "1488489052844_1488488964794_1000000_500_0,25_0,1_";
 		HashMap<String, File> inputFiles = getInputFiles(pattern);
 		
 		assertTrue(inputFiles.size() == 500);
