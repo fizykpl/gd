@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class UtilsDataGeneratorTest {
 	
-	long line = 1000000;
+	long line = 1000;
 	int attribute = 500;
 	double mi = 0.25;
 	double sigma = 0.1;

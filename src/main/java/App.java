@@ -19,26 +19,26 @@ public class App {
 
 	public static void main(String[] args) throws InterruptedException {
 		// Generate Data
-		// long line = 1000000;
-		// int attribute = 500;
-		// double mi = 0.25;
-		// double sigma = 0.1;
-		// LOGGER.info("Start generate data");
-		// long time = System.nanoTime();
-		// File[] filesData = UtilsDataGenerator.generateData(line, attribute,
-		// mi, sigma);
-		// time = System.nanoTime()-time;
-		// LOGGER.info("Time generate data: " + (time*1.0)*10e-10 + " [s]");
-		//
-		//
+		 long line = 1000000;
+		 int attribute = 500;
+		 double mi = 0.25;
+		 double sigma = 0.1;
+		 LOGGER.info("Start generate data");
+		 long time = System.nanoTime();
+		 File[] filesData = UtilsDataGenerator.generateData(line, attribute,
+		 mi, sigma);
+		 time = System.nanoTime()-time;
+		 LOGGER.info("Time generate data: " + (time*1.0)*10e-10 + " [s]");
+		
+		
 		// //Transform Data
-		// DataTransform df = new DataTransform(filesData);
-		// try {
-		// df.execute();
-		// } catch (IOException e) {
-		// LOGGER.warning("IOException: "+ e.getMessage());
-		// e.printStackTrace();
-		// }
+		 DataTransform df = new DataTransform(filesData);
+		 try {
+		 df.execute();
+		 } catch (IOException e) {
+		 LOGGER.warning("IOException: "+ e.getMessage());
+		 e.printStackTrace();
+		 }
 
 		// Search data
 		HashMap<String, File> inputFiles = UtilsDataSearch
@@ -65,25 +65,25 @@ public class App {
 		Collections.sort(and, c);
 		Collections.sort(or, c);
 
-		System.out.println("A" + iDs.toString());
-		System.out.println("B" + iDs2.toString());
-		System.out.println("A & B" + and.toString());
-		System.out.println("A | B" + or.toString());
+//		System.out.println("A" + iDs.toString());
+//		System.out.println("B" + iDs2.toString());
+//		System.out.println("A & B" + and.toString());
+//		System.out.println("A | B" + or.toString());
 
-		Logic l2 = new Logic();
-		l2.add(iDs3);
-		l2.add(iDs2);
-		l2.add(iDs);
-		List<String> and2 = l2.and();
-		List<String> or2 = l2.or();
-		
-		Collections.sort(and2, c);
-		Collections.sort(or2, c);
+//		Logic l2 = new Logic();
+//		l2.add(iDs3);
+//		l2.add(iDs2);
+//		l2.add(iDs);
+//		List<String> and2 = l2.and();
+//		List<String> or2 = l2.or();
+//		
+//		Collections.sort(and2, c);
+//		Collections.sort(or2, c);
 
-		System.out.println("A" + iDs3.toString());
-		System.out.println("B" + iDs2.toString());
-		System.out.println("C" + iDs.toString());
-		System.out.println("A & B & C" + and2.toString());
+//		System.out.println("A" + iDs3.toString());
+//		System.out.println("B" + iDs2.toString());
+//		System.out.println("C" + iDs.toString());
+//		System.out.println("A & B & C" + and2.toString());
 //		System.out.println("A | B | C" + or2.toString());
 
 		LOGGER.info("Finish");
