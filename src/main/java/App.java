@@ -17,7 +17,6 @@ import com.gd.data.transform.DataTransform;
 public class App {
 	public static Logger LOGGER = Logger.getLogger(App.class.getName());
 
-	// public static Logger LOGGER = Logger.getLogger(.class.getName());
 	public static void main(String[] args) throws InterruptedException {
 		// Generate Data
 		// long line = 1000000;
